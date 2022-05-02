@@ -12,27 +12,34 @@
     </head>
     <body>
         <div class="container">
+
+
             <nav>
                 <p><a href="index.html">Portada</a> <a href="peliculas.html">Películas</a> <a href="locaciones.html" class="active">Locaciones</a> <a href="ganancias.html">Ganancias</a></p>
             </nav>
+            <h1> Lugares donde se rodaron las películas: </h1>
+
             <main>
-                <div id="mapa">
-                    <!--acá se mete el mapa-->
-                </div>
+                <div id="mapa"> </div>
             </main>
             <footer>
-                <p><a href="#">Nombre Apellido</a> <a href="#">DNO037</a></p>
+                <p><a href="#">Maura Serra Carrera</a> <a href="#">DNO037</a></p>
             </footer>
         </div>
 <script>
-    var mymap = L.map('mapa').setView([33.5427796,9.9672612], 2);
+    var mymap = L.map('mapa').setView([40.924271,-98.338685], 4);
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
         maxZoom: 18,
-        id: 'mapbox/dark-v10',
+        id: 'mapbox/satellite-v9',
         tileSize: 512,
         zoomOffset: -1
     }).addTo(mymap);
-    L.marker([33.5427796,9.9672612]).addTo(mymap).bindPopup("<b>Hola</b>. Soy un bindPopup.");
+    L.marker([34.021439,-118.8310352]).addTo(mymap).bindPopup("<b> Zuma Beach, California</b>. Discurre la persecución previa a que se presencie la estatua de la libertad medio destruida.");
+    L.marker([34.00781,-118.814488]).addTo(mymap).bindPopup("<b>Westward Beach, California</b>. Concierne a la escena más sobrecogedora de la película, cuando Heston ve la estatua de la libertad medio destruida.");
+    L.marker([36.914831,-111.457294]).addTo(mymap).bindPopup("<b>Page, Arizona</b>. Gran parte del largometraje se desarrolla en esta árida población.");
+    L.marker([37.376857,-110.726121]).addTo(mymap).bindPopup("<b>Powell Lake, Utah</b>. Sucede una de las primeras escenas, dónde los astronautas salen a flote.");
+    L.marker([40.330233,-111.618809]).addTo(mymap).bindPopup("<b>Glen Canyon, Utah</b>. Se desarrollan gran parte de los hechos. Especialmente tiene repercusión en cuanto a los paisajes del planeta de los simios.");
+
 </script>
     </body>
 </html>

@@ -18,12 +18,12 @@
                 </section>
             </main>
             <footer>
-                <p><a href="#">Nombre Apellido</a> <a href="#">DNO037</a></p>
+                <p><a href="#">Maura Serra Carrera</a> <a href="#">DNO037</a></p>
             </footer>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js" integrity="sha512-rKFvwjvE4liWPlFnvH4ZhRDfNZ9FOpdkD/BU5gAIA3VS3vOQrQ5BjKgbO3kxebKhHdHcNUHLqxQYSoxee9UwgA==" crossorigin="anonymous"></script>
         <script>
-            Papa.parse('https://raw.githubusercontent.com/profesorfaco/dno037-2022/main/clase-09/datos.csv', {
+            Papa.parse('https://raw.githubusercontent.com/mauraserra/EVALUACION02/main/peliculas.csv', {
                 download: true,
                 header: true,
                 dynamicTyping: true,
@@ -33,7 +33,7 @@
 
                     var n = new URLSearchParams(window.location.search).get('nro');
                     if (n !== null) {
-                        document.querySelector('section').innerHTML = '<h1>' + peliculas[n].name + '</h1><h4>' + peliculas[n].director + ' (' + peliculas[n].year + ')</h4><img src="images/' + peliculas[n].pic_lg + '"><p>' + peliculas[n].description + '</p><h3>Trailer</h3><p>Puedes ver algunas escenas de la película en <a href="' + peliculas[n].trailer + '" target="_blank">Youtube</a><p>';
+                        document.querySelector('section').innerHTML = '<h1>' + peliculas[n].name + '</h1> <h4>' + peliculas[n].director + '(' + peliculas[n].year + ') </h4> <img src="images/' + peliculas[n].pic + '"> <p>' + peliculas[n].about + '</p> <h3> Trailer </h3> <p> Puedes ver algunas escenas de la película en <a href="' + peliculas[n].youtube + '" target="_blank">Youtube</a> <p>';
 
                     } else {
                         document.querySelector('section').innerHTML = '<h1>Algo salió mal. Pero R2D2 lo reparará</h1><h4>Por favor, vuelve a escoger cualquiera de las <a href="peliculas.html">películas</a></h4>';

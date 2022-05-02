@@ -12,24 +12,18 @@
             <nav>
                 <p><a href="index.html">Portada</a> <a href="peliculas.html" class="active">Películas</a> <a href="locaciones.html">Locaciones</a> <a href="ganancias.html">Ganancias</a></p>
             </nav>
+
             <main>
-              El Planeta de los Simios
-              Beneath the Planet of the Apes
-              Escape from the Planet of the Apes
-              Conquest of the Planet of the Apes
-              Battle for the Planet of the Apes
-              El Planeta de los Simios
-              Rise of the Planet of the Apes
-              Dawn of the Planet of the Apes
-              War for the Planet of the Apes
+              <!--acá se meten las películas-->
             </main>
             <footer>
-                <p><a href="#">Nombre Apellido</a> <a href="#">DNO037</a></p>
+                <p><a href="#">Maura Serra Carrera</a> <a href="#">DNO037</a></p>
             </footer>
         </div>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js" integrity="sha512-rKFvwjvE4liWPlFnvH4ZhRDfNZ9FOpdkD/BU5gAIA3VS3vOQrQ5BjKgbO3kxebKhHdHcNUHLqxQYSoxee9UwgA==" crossorigin="anonymous"></script>
         <script>
-            Papa.parse("https://raw.githubusercontent.com/profesorfaco/dno037-2022/main/clase-09/datos.csv", {
+            Papa.parse("https://raw.githubusercontent.com/mauraserra/EVALUACION02/main/peliculas.csv", {
                 download: true,
                 header: true,
                 dynamicTyping: true,
@@ -37,7 +31,7 @@
                     var peliculas = respuesta.data;
                     console.log(peliculas);
                     peliculas.forEach(function(pelicula,i){
-                        document.querySelector("main").innerHTML += "<article><a href='pelicula.html?nro=" + i + "'><img src='images/" + pelicula.pic_sm + "'><div><h2>" + pelicula.name + "</h2></div></article>";
+                        document.querySelector("main").innerHTML += "<article><a href='pelicula.html?nro=" + i + "'><img src='images/" + pelicula.pic + "'><div><h2>" + pelicula.name + "</h2></div></article>";
                     })
             }
         });
