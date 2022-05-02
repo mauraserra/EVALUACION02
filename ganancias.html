@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Diseño y nuevos medios" />
+        <title>DNO037</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <p><a href="index.html">Portada</a> <a href="peliculas.html">Películas</a> <a href="locaciones.html">Locaciones</a> <a href="ganancias.html" class="active">Ganancias</a></p>
+            </nav>
+            <main>
+                <canvas id="grafico" height="40" width="100">
+                </canvas>
+            </main>
+            <footer>
+                <p><a href="#">Maura Serra Carrera</a> <a href="#">DNO037</a></p>
+            </footer>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.0/dist/chart.min.js"></script>
+    <script>
+var ctx = document.getElementById('grafico').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['El Planeta de los Simios', 'Beneath the Planet of the Apes ', 'Escape from the Planet of the Apes', 'Conquest of the Planet of the Apes', 'Battle for the Planet of the Apes', 'El Planeta de los Simios ', 'Rise of the Planet of the Apes', 'Dawn of the Planet of the Apes', 'War for the Planet of the Apes'],
+        datasets: [{
+            label: 'Recaudación en $',
+            data: [32589624, 18999718, 12348905, 9700000, 8844595, 362211740, 481800873, 707400000, 490719763],
+            backgroundColor: 'rgba(225, 95, 35, 0.75)',
+            borderWidth: 'rgba(227, 95, 35, 0.75)'
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+    </body>
+</html>
